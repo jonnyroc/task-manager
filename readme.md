@@ -29,6 +29,10 @@ Before running the project, you need to have an account with MongoDB Atlas and s
    cd task-manager/client
    yarn install
    ```
-5. use the .env.sample file and rename it to .env, and replace the connection string in it with your mongodb credentials
+4. use the .env.sample file and rename it to .env, and replace the connection string in it with your mongodb credentials
 5. In the server folder run `yarn dev` to start local server at `http://localhost:4000/graphql`
 6. From within the client folder run `yarn start` to start task manager in your default browser
+7. to run test 
+```bash
+yarn test
+```
