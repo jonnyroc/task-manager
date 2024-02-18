@@ -3,9 +3,10 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { TaskList } from './TaskList';
 import * as taskHooks from '../hooks/taskHooks';
+import { ITask } from '../types/task';
 
 jest.mock("./TaskListItem", () => ({
-  TaskListItem: ({ task }) => <li>{task.title}</li>,
+  TaskListItem: ({ task }: {task: ITask}) => <li>{task.title}</li>,
 }));
 
 jest.mock('../hooks/taskHooks', () => ({

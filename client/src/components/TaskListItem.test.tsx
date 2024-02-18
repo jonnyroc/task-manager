@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { TaskListItem } from './TaskListItem';
 import * as taskHooks from '../hooks/taskHooks';
+import { ITask } from '../types/task';
 
 // Mocking the external hooks
 jest.mock('../hooks/taskHooks', () => ({
@@ -12,7 +13,7 @@ jest.mock('../hooks/taskHooks', () => ({
 
 jest.mock('./TaskForm', () => ({
     __esModule: true,
-    TaskForm: ({ onSubmit }) => (
+    TaskForm: ({ onSubmit } : {onSubmit: (task: ITask)=>{}}) => (
       <form onSubmit={(e) => {
         e.preventDefault();
         onSubmit({ title: 'Mocked Title', description: 'Mocked Description', status: 'pending' });
