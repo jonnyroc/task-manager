@@ -1,3 +1,9 @@
+_A Simple Task Manager application_
+
+![Task Manager screenshot](./images/task-manager-screenshot.png "Task Manager screenshot")
+
+<br><br>
+
 # Project Setup Instructions
 
 ## Prerequisites
